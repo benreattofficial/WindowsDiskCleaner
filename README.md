@@ -9,10 +9,10 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows" alt="Platform">
-  <img src="https://img.shields.io/badge/Python-3.15-yellow?style=flat-square&logo=python" alt="Python">
-  <img src="https://img.shields.io/badge/PyQt6-UI-green?style=flat-square&logo=qt" alt="PyQt6">
-  <img src="https://img.shields.io/badge/License-MIT-orange?style=flat-square" alt="License">
+  <img src="[https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)" alt="Platform">
+  <img src="[https://img.shields.io/badge/Python-3.15-yellow?style=flat-square&logo=python](https://img.shields.io/badge/Python-3.15-yellow?style=flat-square&logo=python)" alt="Python">
+  <img src="[https://img.shields.io/badge/PyQt6-UI-green?style=flat-square&logo=qt](https://img.shields.io/badge/PyQt6-UI-green?style=flat-square&logo=qt)" alt="PyQt6">
+  <img src="[https://img.shields.io/badge/License-GPLv3.0-blue.svg?style=flat-square](https://img.shields.io/badge/License-GPLv3.0-blue.svg?style=flat-square)" alt="License: GPLv3">
 </p>
 
 ---
@@ -44,5 +44,39 @@ If you want to run or modify the project directly from the source code:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/benreattofficial/Windows-Disk-Cleaner.git](https://github.com/benreattofficial/Windows-Disk-Cleaner.git)
+   git clone https://github.com/benreattofficial/Windows-Disk-Cleaner.git
    cd Windows-Disk-Cleaner
+Install dependencies:
+
+Bash
+pip install PyQt6 psutil pyinstaller
+Run the application:
+
+Python
+python main.py
+📦 Building the Executable & Installer
+1. Build Standalone .exe (PyInstaller)
+To compile the project into a single native Windows executable with a custom icon:
+
+Bash
+pyinstaller --noconsole --onefile --icon=icon.ico --name="DiskCleaner" main.py
+2. Create Setup Installer (Inno Setup)
+Install Inno Setup.
+
+Open the provided setup.iss script in Inno Setup Compiler.
+
+Click Build > Compile (or press Ctrl + F9) to generate WindowsDiskCleaner_Setup.exe.
+
+📂 Project Structure
+Plaintext
+DiskCleanerApp/
+│
+├── main.py            # Main application entry point and PyQt6 UI logic
+├── i18n.py            # 5-language internationalization dictionary
+├── setup.iss          # Inno Setup installation script configuration
+└── icon.ico           # Application branding icon
+👤 Developer
+Developer: benreattofficial
+
+📜 License
+This project is licensed under the GNU General Public License v3.0 (GPLv3). See the LICENSE file for details.
